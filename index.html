@@ -1,100 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #666;
-            margin-top: 20px;
-        }
-        p {
-            color: #777;
-            line-height: 1.6;
-        }
-        .contact-details {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-        .profile-img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: block;
-            border: 5px solid #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .toggle-button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <img src="Tom_and_jerry_PNG50.webp" alt="Ayush Raj" class="profile-img">
-        <h1>Ayush Raj</h1>
-        <h2>Career Objective</h2>
-        <p>
-            career objective
-        </p>
+    <h1>SSH Commands for CentOS</h1>
 
-        <h2>Experience</h2>
-        <p>
-            ESOC Techops
-        </p>
-
-        <button class="toggle-button">Toggle Additional Information</button>
-        <div class="hidden">
-            <h2>Projects</h2>
-            <p>
-                abc
-            </p>
-
-            other sections
-
-            <div class="contact-details">
-                <p>Noida, Uttar Pradesh, India</p>
-                <p>+91-9340383032</p>
-                <p>rch.ayush@gmail.com</p>
-            </div>
-        </div>
+    <div class="command">
+        <p>To log into a remote host using SSH, use the following command:</p>
+        <pre><code>ssh -p 22 username@remote_ip</code></pre>
+        <button class="copy-button" data-clipboard-target="#command-1">Copy</button>
     </div>
 
-    <script>
-        const toggleButton = document.querySelector('.toggle-button');
-        const hiddenSection = document.querySelector('.hidden');
-
-        toggleButton.addEventListener('click', () => {
-            hiddenSection.classList.toggle('hidden');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
