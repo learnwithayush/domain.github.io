@@ -1,0 +1,32 @@
+body {
+	margin: 0px;
+}
+
+div {
+text-align: center;
+margin: 0px;
+background-color: #23395d;
+color: white;
+padding: auto;
+}
+h1 {
+padding: 10px;
+margin: 0px;
+}
+
+
+form {
+padding-top: 20px;
+}
+p {
+	margin: 8px 2px;
+}
+textarea {
+	max-width: 800px;
+	max-height: 200px;
+	min-width: 800px;
+	min-height: 200px;
+}
+input {
+margin-left: 2px;
+}
