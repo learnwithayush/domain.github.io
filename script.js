@@ -34,13 +34,18 @@ function resizeImage() {
     canvas.width = pixelSize;
     canvas.height = pixelSize;
 
-    ctx.drawImage(resizedImage, 0, 0, pixelSize, pixelSize);
+    const image = new Image();
+    image.src = resizedImage.src;
 
-    canvas.toBlob(function(blob) {
-        const url = URL.createObjectURL(blob);
-        downloadLink.href = url;
-        downloadLink.style.display = "block";
-    }, "image/jpeg", 0.7); // 0.7 is the quality of the image
+    image.onload = function() {
+        ctx.drawImage(image, 0, 0, pixelSize, pixelSize);
+
+        canvas.toBlob(function(blob) {
+            const url = URL.createObjectURL(blob);
+            downloadLink.href = url;
+            downloadLink.style.display = "block";
+        }, "image/jpeg", 0.7); // 0.7 is the quality of the image
+    };
 
     downloadLink.addEventListener("click", function() {
         setTimeout(function() {
