@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Store</h1>
+    </header>
+    <nav>
+        <a href="#catalog">Catalog</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About Me</a>
+    </nav>
+    <section id="catalog">
+        <h2>Catalog</h2>
+        <div class="product" id="product1">
+            <h3>Pillow</h3>
+            <p>Available Colors: <span class="color-option" onclick="changeColor('red', 'product1')">Red</span>, <span class="color-option" onclick="changeColor('green', 'product1')">Green</span>, <span class="color-option" onclick="changeColor('blue', 'product1')">Blue</span></p>
+            <a href="https://www.amazon.com/pillow" target="_blank">Buy on Amazon</a>
+            <a href="https://www.flipkart.com/pillow" target="_blank">Buy on Flipkart</a>
+        </div>
+        <!-- Add more products with similar structure -->
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm" onsubmit="submitForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write something about yourself here.</p>
+    </section>
+    <footer>
+        © 2024 Online Store
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
