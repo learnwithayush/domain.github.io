@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayush Raj - DevOps Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -13,12 +14,17 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            scroll-behavior: smooth;
         }
         header {
             background: #333;
             color: #fff;
-            padding: 20px 0;
+            padding: 10px 0;
             border-bottom: #77a8a8 3px solid;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         header a {
             color: #fff;
@@ -37,30 +43,36 @@
         }
         header #branding {
             float: left;
+            padding: 0 20px;
         }
         header #branding h1 {
             margin: 0;
-            padding: 0 20px;
-            display: inline-block;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
+            padding-top: 80px;
         }
         .hero {
             background: url('https://via.placeholder.com/1500x400') no-repeat center center/cover;
             height: 400px;
             color: #fff;
             text-align: center;
-            padding-top: 200px;
+            padding-top: 150px;
         }
         .card {
             background: #fff;
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
         }
         h1, h2, h3 {
             color: #333;
@@ -74,6 +86,7 @@
             margin-bottom: 10px;
             padding: 10px;
             border: #ddd 1px solid;
+            border-radius: 5px;
         }
         .nav-btn {
             display: none;
@@ -105,8 +118,26 @@
             color: #fff;
             margin: 0 10px;
         }
+        .social a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social a:hover {
+            color: #77a8a8;
+        }
         .hidden {
             display: none;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -129,7 +160,7 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero animate__animated animate__fadeIn">
         <div class="container">
             <h1>Welcome to My Professional Page</h1>
             <p>Dedicated and skilled DevOps Engineer with expertise in designing and implementing robust infrastructure solutions.</p>
@@ -138,14 +169,14 @@
 
     <div class="container">
         <section>
-            <div class="card">
+            <div class="card fade-in">
                 <h2>Career Objective</h2>
                 <p>I seek a challenging position in the area of DevOps, Technical Architect, System Design, and related fields where I can share my skills and expand my capabilities further in the pursuit of progressive career advancement.</p>
             </div>
         </section>
 
         <section id="skills">
-            <div class="card">
+            <div class="card fade-in">
                 <h2>Skills & Certifications</h2>
                 <ul class="skills">
                     <li>Google Cybersecurity Certificate</li>
@@ -162,7 +193,7 @@
         </section>
 
         <section id="experience">
-            <div class="card">
+            <div class="card fade-in">
                 <h2>Experience</h2>
                 <ul class="experience">
                     <li>
@@ -191,7 +222,7 @@
         </section>
 
         <section id="projects">
-            <div class="card">
+            <div class="card fade-in">
                 <h2>Projects</h2>
                 <ul class="projects">
                     <li><strong>Bigfix:</strong> Implemented tool across entire infrastructure.</li>
@@ -204,28 +235,11 @@
         </section>
 
         <section id="contact">
-            <div class="card">
+            <div class="card fade-in">
                 <h2>Contact Information</h2>
                 <p><strong>Location:</strong> Noida, Uttar Pradesh, India</p>
                 <p><strong>Phone:</strong> +91-9340383032</p>
                 <p><strong>Email:</strong> rch.ayush@gmail.com</p>
                 <div class="social">
                     <a href="https://www.linkedin.com/in/ayush-raj-21692640/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>Ayush Raj &copy; 2024. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        document.querySelector('.nav-btn').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('header ul').classList.toggle('hidden');
-        });
-    </script>
-</body>
-</html>
+                    <a href="https://github.com/your-profile" target="_blank"><i
