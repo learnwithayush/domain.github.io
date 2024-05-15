@@ -241,5 +241,44 @@
                 <p><strong>Phone:</strong> +91-9340383032</p>
                 <p><strong>Email:</strong> rch.ayush@gmail.com</p>
                 <div class="social">
-                    <a href="https://www.linkedin.com/in/ayush-raj-21692640/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/your-profile" target="_blank"><i
+                    <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Ayush Raj &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-btn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('header ul').classList.toggle('hidden');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let elements = document.querySelectorAll('.fade-in');
+            let options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            let observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeIn');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
