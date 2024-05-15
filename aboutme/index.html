@@ -3,73 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
+    <title>Ayush Raj - DevOps Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            border-bottom: #77a8a8 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            text-align: right;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+            padding: 0 20px;
+            display: inline-block;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1500x400') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            padding-top: 200px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        h1, h2, h3 {
             color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul.skills li, ul.projects li, ul.experience li {
+            background: #f4f4f4;
             margin-bottom: 10px;
+            padding: 10px;
+            border: #ddd 1px solid;
         }
-        h2 {
-            color: #666;
+        .nav-btn {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            header ul {
+                display: none;
+            }
+            .nav-btn {
+                display: inline-block;
+                cursor: pointer;
+                color: #fff;
+                font-size: 24px;
+                padding: 10px;
+            }
+            .nav-btn.active + ul {
+                display: block;
+                text-align: center;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
             margin-top: 20px;
         }
-        p {
-            color: #777;
-            line-height: 1.6;
+        footer a {
+            color: #fff;
+            margin: 0 10px;
         }
-        .contact-details {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-        .profile-img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: block;
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <h1>Bridging Technological Excellence: Your Trusted DevOps and IT Infrastructure Consultant</h1>
-    <p>Greetings,</p>
-    
-    <p>In today's rapidly evolving technological landscape, the need for streamlined operations, secure data management, and efficient processes is paramount. As a seasoned DevOps and IT Infrastructure consultant, I bring over 5 years of experience to empower organizations across various sectors, from hospitals and builders to IT firms and government entities, to achieve their goals through cutting-edge solutions.</p>
-    
-    <h2>Holistic Expertise</h2>
-    <p>My journey in the realms of DevOps and IT Infrastructure has equipped me with a profound understanding of the challenges and opportunities unique to each sector. Whether it's ensuring the robustness of hospital data systems, optimizing the IT backbone for construction projects, enhancing efficiency for IT firms, or fortifying government organizations' digital presence, I possess the versatility to address diverse needs.</p>
-    
-    <h2>Tailored Solutions</h2>
-    <p>I recognize that every client comes with distinct requirements and visions. I specialize in crafting bespoke strategies that align seamlessly with each organization's objectives. From orchestrating DevOps workflows that accelerate development cycles to designing resilient IT architectures that ensure business continuity, my solutions are tailored to enhance performance and deliver tangible results.</p>
-    
-    <h2>Trusted Certification</h2>
-    <p>My commitment to excellence is exemplified by my DevOps Certified Engineer credentials from the esteemed Caltech. This certification stands as a testament to my ability to integrate best practices, streamline processes, and foster collaboration—essential elements in delivering optimal outcomes in complex projects.</p>
-    
-    <h2>Versatility</h2>
-    <p>With a strong foundation in electronics coupled with years of practical experience, I offer a unique blend of technical proficiency and strategic thinking. This enables me to communicate effectively with stakeholders across sectors, bridging the gap between technology and business needs.</p>
-    
-    <h2>Proven Track Record</h2>
-    <p>Throughout my journey, I've had the privilege of collaborating with a diverse range of clients. For example, in the healthcare sector, I've optimized data management systems for hospitals, ensuring compliance with rigorous regulatory standards. For builders, I've architected scalable and secure IT frameworks to support large-scale construction endeavors. My contributions to IT firms have resulted in streamlined operations and heightened efficiency, while my work with government organizations has enhanced their digital infrastructure for improved citizen engagement.</p>
-    
-    <h2>Future Together</h2>
-    <p>I am excited by the prospect of partnering with your esteemed organization to leverage my expertise for transformative outcomes. Whether it's elevating your IT systems' resilience, accelerating project timelines through DevOps agility, or fortifying your digital presence, I am dedicated to driving innovation and excellence.</p>
-    
-    <p>Thank you for considering me as your potential DevOps and IT Infrastructure consultant. Together, we can build a future fueled by technology that empowers growth, efficiency, and success.</p>
-    
-    <p>Looking forward to the opportunity,</p>
-    <p>Ayush Raj<br>DevOps & IT Infrastructure Consultant</p>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Ayush Raj</h1>
+                <p>DevOps Engineer</p>
+            </div>
+            <span class="nav-btn">&#9776;</span>
+            <nav>
+                <ul>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to My Professional Page</h1>
+            <p>Dedicated and skilled DevOps Engineer with expertise in designing and implementing robust infrastructure solutions.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section>
+            <div class="card">
+                <h2>Career Objective</h2>
+                <p>I seek a challenging position in the area of DevOps, Technical Architect, System Design, and related fields where I can share my skills and expand my capabilities further in the pursuit of progressive career advancement.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="card">
+                <h2>Skills & Certifications</h2>
+                <ul class="skills">
+                    <li>Google Cybersecurity Certificate</li>
+                    <li>DevOps Certification Training</li>
+                    <li>Configuration Management with Chef, Puppet, and Ansible</li>
+                    <li>Docker Certified Associate</li>
+                    <li>Certified Kubernetes Administrator</li>
+                    <li>DevOps on AWS</li>
+                    <li>Terraform</li>
+                    <li>Git and GitHub Training</li>
+                    <li>CI/CD Pipeline with Jenkins</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="card">
+                <h2>Experience</h2>
+                <ul class="experience">
+                    <li>
+                        <h3>Sr Engineer Technical Ops: Infoedge India Pvt Ltd</h3>
+                        <p><strong>May 2023 - Present</strong></p>
+                        <ul>
+                            <li>Design and manage infrastructure solutions using various DevOps tools.</li>
+                            <li>Deploy and maintain OpenStack environments ensuring high availability and scalability.</li>
+                            <li>Implement Terraform for infrastructure as code, streamlining deployment processes.</li>
+                            <li>Optimize DNS configurations for seamless network communication.</li>
+                            <li>Collaborate with cross-functional teams to troubleshoot and resolve technical issues.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>ESOC Engineer: Macro IT Service Client-Infoedge India Pvt Ltd</h3>
+                        <p><strong>April 2021 - May 2023</strong></p>
+                        <ul>
+                            <li>Patching windows and Linux servers.</li>
+                            <li>Maintain infrastructure files on AWS/Azure/Openstack using Terraform.</li>
+                            <li>Manage Kubernetes clusters, Docker containers, and Puppet configurations.</li>
+                            <li>Implement and manage security tools like SentinelOne.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="card">
+                <h2>Projects</h2>
+                <ul class="projects">
+                    <li><strong>Bigfix:</strong> Implemented tool across entire infrastructure.</li>
+                    <li><strong>SentinelOne:</strong> Deployed security tool in the entire infrastructure.</li>
+                    <li><strong>Centos7:</strong> Upgraded OS and installed required software.</li>
+                    <li><strong>Falcon-sensor (Crowdstrike):</strong> POC and implementation.</li>
+                    <li><strong>Migration from CentOs to Rocky Linux:</strong> Managed successful migration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="card">
+                <h2>Contact Information</h2>
+                <p><strong>Location:</strong> Noida, Uttar Pradesh, India</p>
+                <p><strong>Phone:</strong> +91-9340383032</p>
+                <p><strong>Email:</strong> rch.ayush@gmail.com</p>
+                <div class="social">
+                    <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Ayush Raj &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-btn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('header ul').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
